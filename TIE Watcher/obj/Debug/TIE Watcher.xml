@@ -1,0 +1,1952 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+TIE Watcher
+</name>
+</assembly>
+<members>
+<member name="T:TIE_Watcher.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:TIE_Watcher.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:TIE_Watcher.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:TIE_Watcher.ComboBoxItem">
+ <summary>
+ Basic class to use for all ComboBox items that support an icon and text.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.ModelBrowserComboItem">
+ <summary>
+ Class for use in the FormModelBrowser craft selection combo box.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.ModelBrowserTreeNodeTag">
+ <summary>
+ A class for holding additional info about a node in the ModelBrowser TreeView.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.ModelBrowserTreeNodeType">
+ <summary>
+ Enumeration for SpaceObject Tree Node types.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.ModelBrowserTreeNodeType.Category">
+ <summary>
+ The node is structural (i.e. 'Parts' heading) and has no relevant tag data.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.ModelBrowserTreeNodeType.Header">
+ <summary>
+ The node represents Model Header information.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.ModelBrowserTreeNodeType.Part">
+ <summary>
+ The node represents Model Part information.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.ModelBrowserTreeNodeType.Mesh">
+ <summary>
+ The node represents a ModelMesh within a ModelPart.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.SpaceObjectTreeNodeTag">
+ <summary>
+ A class for holding additional info about a node in the SpaceObject TreeView.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.SpaceObjectTreeNodeType">
+ <summary>
+ Enumeration for SpaceObject Tree Node types.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.SpaceObjectTreeNodeType.Category">
+ <summary>
+ The node is structural (category heading) and has no relevant tag data.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.SpaceObjectTreeNodeType.Item">
+ <summary>
+ The node is an item that contains relevant tag data.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.ModelHeaderPanel">
+ <summary>
+ Panel for displaying ModelHeader info.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.ModelMeshPanel">
+ <summary>
+ Panel for display ModelMesh info.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.ModelPartHeaderPanel">
+ <summary>
+ Panel for displaying ModelPartHeader info.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.SpaceObjectSelector">
+ <summary>
+ Control bearing a drop-down combo box for selecting SpaceObjects.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.SpaceObjectSelector.AddItem(TIE_Watcher.TIE.SpaceObject,System.Int32)">
+ <summary>
+ Adds a new SpaceObject to the selection, representing the given SpaceObject index.
+ </summary>
+ <param name="spaceObject"></param>
+ <param name="index"></param>
+</member>
+<member name="M:TIE_Watcher.SpaceObjectSelector.RemoveItemBySpaceObjectIndex(System.Int32)">
+ <summary>
+ Removes an item by its SpaceObject index.
+ </summary>
+ <param name="index"></param>
+</member>
+<member name="M:TIE_Watcher.SpaceObjectSelector.UpdateItem(TIE_Watcher.TIE.SpaceObject,System.Int32)">
+ <summary>
+ Updates an existing item by its SpaceObject index.
+ </summary>
+ <param name="spaceObject"></param>
+ <param name="index"></param>
+</member>
+<member name="M:TIE_Watcher.SpaceObjectSelector.SelectSpaceObjectIndex(System.Int32)">
+ <summary>
+ Changes the selected item by SpaceObject index.
+ </summary>
+ <param name="index"></param>
+</member>
+<member name="P:TIE_Watcher.SpaceObjectSelector.SelectedSpaceObjectIndex">
+ <summary>
+ Gets the SpaceObject index of the selected item.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.SpaceObjectSelector.DisableMouseWheelScrolling">
+ <summary>
+ Gets or sets whether the mouse wheel should be able to scroll the combo box.
+ </summary>
+ <returns></returns>
+</member>
+<member name="E:TIE_Watcher.SpaceObjectSelector.SelectedIndexChanged">
+ <summary>
+ 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="T:TIE_Watcher.DosBoxServices">
+ <summary>
+ A class for manipulating a running instance of DOSBox, via process memory reads and/or writes.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.#cctor">
+ <summary>
+ Type constructor.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.#ctor(System.Diagnostics.Process)">
+ <summary>
+ Creates a new instance of this class, using the specified process as the source for memory reads.
+ </summary>
+ <param name="sourceProc">Process to use as the source</param>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.Close">
+ <summary>
+ Closes access to the instance's process and frees the handle.
+ This does not close or terminate the underlying process.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.ReadDosMemoryBytes(System.Int32,System.Int32)">
+ <summary>
+ Reads an array of bytes from an address within emulated DOS memory.
+ Returns Nothing if the read failed for any reason.
+ </summary>
+ <param name="address">Physical Address within DOS memory to read from.</param>
+ <param name="count">Number of bytes to read from DOS memory.</param>
+ <returns>An array of bytes read from emulated DOS memory.</returns>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.ReadDosMemoryByte(System.Int32)">
+ <summary>
+ Reads a Byte from an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.ReadDosMemoryUInt16(System.Int32)">
+ <summary>
+ Reads a UInt16 from an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.ReadDosMemoryInt16(System.Int32)">
+ <summary>
+ Reads a Int16 from an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.ReadDosMemoryUInt32(System.Int32)">
+ <summary>
+ Reads a UInt32 from an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.ReadDosMemoryInt32(System.Int32)">
+ <summary>
+ Reads a Int32 from an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.WriteDosMemoryBytes(System.Int32,System.Byte[])">
+ <summary>
+ Writes an array of bytes to an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <param name="bytes"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.WriteDosMemoryByte(System.Int32,System.Byte)">
+ <summary>
+ Writes a Byte to an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.WriteDosMemoryUInt16(System.Int32,System.UInt16)">
+ <summary>
+ Writes a UInt16 to an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.WriteDosMemoryInt16(System.Int32,System.Int16)">
+ <summary>
+ Writes a Int16 to an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.WriteDosMemoryUInt32(System.Int32,System.UInt32)">
+ <summary>
+ Writes a UInt32 to an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.DosBoxServices.WriteDosMemoryInt32(System.Int32,System.Int32)">
+ <summary>
+ Writes a Int16 to an address within emulated DOS memory.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="P:TIE_Watcher.DosBoxServices.CurrentProgramName">
+ <summary>
+ Gets the name of the program currently running in the DOSBox instance.
+ </summary>
+ <returns>String represenation of the program name.</returns>
+</member>
+<member name="P:TIE_Watcher.DosBoxServices.Process">
+ <summary>
+ Gets the Process that was opened for use with this instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.ResourceHelper">
+ <summary>
+ Helper class for accessing embedded resources.
+ Accessible only from within this assembly.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.ResourceHelper.GetEmbeddedResourceStream(System.String)">
+ <summary>
+ Loads the specified manifest resource from this assembly.
+ </summary>
+ <param name="name">The case-sensitive name of the manifest resource being requested.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.FormCraftInfo.UpdateDisplay(TIE_Watcher.TIE.SpaceObject,TIE_Watcher.TIE.CraftObject)">
+ <summary>
+ Updates the form's displays using the provided SpaceObject and CraftObject data.
+ </summary>
+ <param name="spaceObject"></param>
+ <param name="craftObject"></param>
+</member>
+<member name="T:TIE_Watcher.FormModelRender">
+ <summary>
+ Class for rendering a TIE Fighter Model using the knowledge I've got so far.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.FormModelVectorize">
+ <summary>
+ Debug/development form used to aid creation of craft vector images for Combat Map.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.NativeMethods">
+ <summary>
+ Class for invoking native methods, as recommended by MSDN.
+ https://msdn.microsoft.com/en-us/library/ms182161(v=vs.80).aspx
+ </summary>
+</member>
+<member name="T:TIE_Watcher.StringsEx">
+ <summary>
+ Additional functions to extend and supplement Microsoft.VisualBasic.Strings
+ </summary>
+</member>
+<member name="M:TIE_Watcher.StringsEx.TrimNull(System.String)">
+ <summary>
+ Returns a string that is cut short by any NULL characters it may contain.
+ </summary>
+ <param name="str">String to trim.</param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.CraftObject">
+ <summary>
+ Class representation of a TIE Fighter Craft_Object struct
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObject.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObject.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObject.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ </summary>
+ <param name="bytes"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObject.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.CraftObject.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.CraftObjectWeapon">
+ <summary>
+ Class representation of a TIE Fighter CraftWeapon struct
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObjectWeapon.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObjectWeapon.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObjectWeapon.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ </summary>
+ <param name="bytes"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.CraftObjectWeapon.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.CraftObjectWeapon.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.FlightGroupStatus">
+ <summary>
+ Class representation of a TIE Fighter Flight Group Status struct.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.FlightGroupStatus.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.FlightGroupStatus.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ The array must be exactly 48 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to build the structure from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.FlightGroupStatus.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the fields in the class using the provided array of bytes.
+ The array must be exactly 48 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.FlightGroupStatus.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.AnimationResource">
+ <summary>
+ Class that encapsulates a TIE Fighter Animation (ANIM) Resource.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.AnimationResource.#ctor(System.IO.Stream)">
+ <summary>
+ Creates a new instance of this class using the data in the provided stream.
+ Only accessible from within this assembly, specifically meant to be accessed by an instance of the LFD class.
+ </summary>
+ <param name="srcStream"></param>
+</member>
+<member name="P:TIE_Watcher.TIE.AnimationResource.Frames(System.Int32,TIE_Watcher.TIE.PaletteResource,System.Boolean,System.Boolean)">
+ <summary>
+ Gets one of the animation's frames drawn with the specified palette and rendering options.
+ </summary>
+ <param name="index">Index of the frame.</param>
+ <param name="palette">PaletteResource object whose colors will be used to render the frame.</param>
+ <param name="transparent">Whether or not the frame should be rendered with color index 0 as transparent.</param>
+ <param name="centered">Whether the frame should be re-centered or left as-is.</param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.LFD">
+ <summary>
+ Class for handling TIE Fighter's LFD resource files, as well as accessing resources embedded within.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.LFD.Res_Item">
+ <summary>
+ Internal structure, used for resource entries in the LFD file.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.LFD.createFromStream(System.IO.Stream)">
+ <summary>
+ Creates a new instance of this class using the provided stream.
+ </summary>
+ <param name="stream">The stream to create this instance from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.LFD.#ctor(System.String)">
+ <summary>
+ Creates a new instance of this class using a file.
+ </summary>
+ <param name="fileName"></param>
+</member>
+<member name="M:TIE_Watcher.TIE.LFD.#ctor(System.IO.Stream)">
+ <summary>
+ Creates a new instance of this class using a stream.
+ NOTE: Do not close the source stream used to create this class!
+ </summary>
+ <param name="stream"></param>
+</member>
+<member name="M:TIE_Watcher.TIE.LFD.ContainsResource(System.String,System.String)">
+ <summary>
+ Returns if the LFD contains a resource of the specified name and type.
+ </summary>
+ <param name="resType">Type code of the resource to check.</param>
+ <param name="resName">Name of the resource to check.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.LFD.LoadPalette(System.String)">
+ <summary>
+ Loads a Palette (PLTT) resource from the LFD.
+ </summary>
+ <param name="resName">Name of the resource to load.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.LFD.LoadAnimation(System.String)">
+ <summary>
+ Loads an Animation (ANIM) resource from the LFD.
+ </summary>
+ <param name="resName">Name of the resource to load.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.LFD.LoadModel(System.String)">
+ <summary>
+ Loads a 3D Model (SHIP) resource from the LFD.
+ </summary>
+ <param name="resName">Name of the resource to load.</param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelResource">
+ <summary>
+ Class that encapsulates a TIE Fighter 3D Model (SHIP) Resource.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelResource.#ctor(System.IO.Stream)">
+ <summary>
+ Creates a new instance of this class using the data in the provided stream.
+ Only accessible from within this assembly, specifically meant to be accessed by an instance of the LFD class.
+ </summary>
+ <param name="srcStream"></param>
+</member>
+<member name="T:TIE_Watcher.TIE.PaletteResource">
+ <summary>
+ Class that encapsulates a TIE Fighter Palette (PLTT) Resource.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.PaletteResource.#ctor(System.IO.Stream)">
+ <summary>
+ Creates a new instance of this class using the data in the provided stream.
+ Only accessible from within this assembly, specifically meant to be accessed by an instance of the LFD class.
+ </summary>
+ <param name="srcStream"></param>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionGlobalGoal">
+ <summary>
+ Class representation of a TIE Fighter Missioan Global Goal struct.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionGlobalGoal.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionGlobalGoal.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ The array must be exactly 28 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to build the structure from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionGlobalGoal.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the fields in the class using the provided array of bytes.
+ The array must be exactly 28 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionGlobalGoal.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelFace">
+ <summary>
+ Class representation of a TIE Fighter Model Face.
+ <!--
+ NOTE: This is not a direct structural representation but rather an aggregation, as data for a face is
+ spread out and that would make things much too messy to maintain or design.
+ -->
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelFaceType">
+ <summary>
+ ModelFace types.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.ModelFaceType.Line">
+ <summary>
+ The face is a line with a given thickness.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.ModelFaceType.Polygon">
+ <summary>
+ The face is a polygon.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelFaceFlags">
+ <summary>
+ Flags for ModelFaces.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.ModelFaceFlags.SmoothShading">
+ <summary>
+ Indicates the face should be rendered with smooth rather than flat shading.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.ModelFaceFlags.NoCulling">
+ <summary>
+ Indicates the face should be exempt from backface culling.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelFaceMarking">
+ <summary>
+ Class representation of a TIE Fighter Model Face Marking.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelHeader">
+ <summary>
+ Class representation of a TIE Fighter SHIP_Head struct.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelHeader.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelHeader.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ </summary>
+ <param name="bytes"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelHeader.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.ModelHeader.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelMesh">
+ <summary>
+ Class representation of a TIE Fighter Model Mesh.
+ <!--
+ NOTE: This is not a direct structural representation but rather an aggregation, as data for a mesh is
+ spread out and that would make things much too messy to maintain or design.
+ -->
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelMesh.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelMesh.CreateFromStream(System.IO.Stream)">
+ <summary>
+ Creates a new instance of this class using the data in the specified stream.
+ The stream should already be at the position of a SHIP_Mesh struct before calling this method.
+ </summary>
+ <param name="stream"></param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.ModelMesh.MarkedFacesCount">
+ <summary>
+ Gets the number of faces that have markings on them.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelPart">
+ <summary>
+ Class representation of a TIE Fighter Model Part.
+ <!--
+ NOTE: This is not a direct structural representation but rather an aggregation, as data for a part is
+ spread out and that would make things much too messy to maintain or design.
+ -->
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelPart.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.ModelPart.CreateFromStream(System.IO.Stream)">
+ <summary>
+ Creates a new instance of this class using the data in the specified stream.
+ The stream should already be at the position of a SHIP_Part struct before calling this method.
+ The stream's position is not restored in any way upon returning.
+ </summary>
+ <param name="stream"></param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelVertex">
+ <summary>
+ Class representation of a TIE Fighter Model Vertex.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.Point3D">
+ <summary>
+ Class representation of a 3D Point.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.Point3D.#ctor(System.Int16,System.Int16,System.Int16)">
+ <summary>
+ Creates a new instance of this class using signed 16-bit integers.
+ </summary>
+ <param name="x"></param>
+ <param name="y"></param>
+ <param name="z"></param>
+</member>
+<member name="M:TIE_Watcher.TIE.Point3D.#ctor(System.Single,System.Single,System.Single)">
+ <summary>
+ Creates a new instance of this class using single-precision floating points.
+ </summary>
+ <param name="x"></param>
+ <param name="y"></param>
+ <param name="z"></param>
+</member>
+<member name="M:TIE_Watcher.TIE.Point3D.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.Point3D.Transform(TIE_Watcher.TIE.Matrix3D)">
+ <summary>
+ Applies a transformation matrix to the vertex.
+ </summary>
+ <param name="matrix"></param>
+</member>
+<member name="M:TIE_Watcher.TIE.Point3D.Distance(TIE_Watcher.TIE.Point3D)">
+ <summary>
+ Returns the distance between this point and another.
+ </summary>
+ <param name="point"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.Point3D.Transform(TIE_Watcher.TIE.Point3D,TIE_Watcher.TIE.Matrix3D)">
+ <summary>
+ Applies a transformation matrix to a vertex and returns a new instance storing the result.
+ </summary>
+ <param name="point"></param>
+ <param name="matrix"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.Point3D.DotProduct(TIE_Watcher.TIE.Point3D)">
+ <summary>
+ Returns the dot product of this point and another point.
+ </summary>
+ <param name="point"></param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.Matrix3D">
+ <summary>
+ Class representation of a 3D Transformation Matrix.
+ Not the ones specifically used in TIE Fighter -- this is for rendering TIE Fighter models my own way.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.Matrix3D.#ctor">
+ <summary>
+ Initializes a new instance of this class as the identity matrix.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.Matrix3D.Multiply(TIE_Watcher.TIE.Matrix3D)">
+ <summary>
+ Multiplies this matrix by another matrix.
+ </summary>
+ <param name="matrix"></param>
+</member>
+<member name="M:TIE_Watcher.TIE.Matrix3D.ScaleTransform(System.Single,System.Single,System.Single)">
+ <summary>
+ Applies a scalar transformation to the matrix.
+ </summary>
+ <param name="x"></param>
+ <param name="y"></param>
+ <param name="z"></param>
+</member>
+<member name="M:TIE_Watcher.TIE.Matrix3D.RotateTransform(TIE_Watcher.TIE.RotationAxis,System.Single)">
+ <summary>
+ Applies a rotation matrix around the specified axis by an angle in degrees.
+ </summary>
+ <param name="axis"></param>
+ <param name="angle"></param>
+</member>
+<member name="T:TIE_Watcher.TIE.RotationAxis">
+ <summary>
+ Enumeration for the type of rotation to perform on a 3D matrix.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.SpaceObjectDefinition">
+ <summary>
+ Class representation of a TIE Fighter Space Object Definition struct.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObjectDefinition.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObjectDefinition.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObjectDefinition.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ </summary>
+ <param name="bytes"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObjectDefinition.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectDefinition.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupStatus">
+ <summary>
+ Enumeration for Mission Flight Group Status modifiers
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionFlightGroupStatus.None">
+ <summary>
+ Default status.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionFlightGroupStatus.DoubleWarheads">
+ <summary>
+ Double load of warheads.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionFlightGroupStatus.HalfWarheads">
+ <summary>
+ Half load of warheads.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionFlightGroupStatus.Disabled">
+ <summary>
+ Craft starts off Disabled.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionFlightGroupStatus.ShieldsCharging">
+ <summary>
+ Shields start at 0% and charge normally.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupWarhead">
+ <summary>
+ Enumeration for Mission Flight Group Warhead setting
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupBeam">
+ <summary>
+ Enumeration for Mission Flight Group Beam setting
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupAI">
+ <summary>
+ Enumerartion for Mission Flight Group AI setting
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupMarkings">
+ <summary>
+ Enumeration for Mission Flight Group Markings setting
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupFormation">
+ <summary>
+ Enumeration for Mission Flight Group Formations
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupArrivalDifficulty">
+ <summary>
+ Enumeration for Mission Flight Group Arrival Difficulty
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionTriggerCondition">
+ <summary>
+ Enumeration for Mission Trigger Condition
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionVariableType">
+ <summary>
+ Enumeration for Mission Variable Types
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionCraftCategory">
+ <summary>
+ Enumeration for Mission Craft Categories
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionObjectCategory">
+ <summary>
+ Enumeration for Mission Object Categories
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionTriggerAmount">
+ <summary>
+ Enumeration for Mission Trigger Amounts
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionTriggerAmount.Percent100">
+ <summary>
+ 100%
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionTriggerAmount.Percent75">
+ <summary>
+ 75%
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionTriggerAmount.Percent50">
+ <summary>
+ 50%
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionTriggerAmount.Percent25">
+ <summary>
+ 25%
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionGoalAmount">
+ <summary>
+ Enumeration for Mission Goal Amounts
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionAbortTrigger">
+ <summary>
+ Enumeration for Mission About Triggers
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionAbortTrigger.NoShields">
+ <summary>
+ Craft will abort if shields fall to 0%.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionAbortTrigger.Systems75">
+ <summary>
+ Craft will abort if Systems fall below 75% (fighters and transports only).
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionAbortTrigger.OutOfWarheads">
+ <summary>
+ Craft will abort when it runs out of warheads.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionAbortTrigger.HullDamage">
+ <summary>
+ Craft will abort if hull integrity falls below 50%.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionAbortTrigger.Attacked">
+ <summary>
+ Craft will abort if it is attacked.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionOrderType">
+ <summary>
+ Enumeration for Mission Order Types
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.HoldStation">
+ <summary>
+ Hold Station.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.GoHome">
+ <summary>
+ Go Home.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Circle">
+ <summary>
+ Circle.
+ Var1 = Number of Loops.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.CircleAndEvade">
+ <summary>
+ Circle and Evade.
+ Var1 = Number of Loops.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Rendezvous">
+ <summary>
+ Rendezvous.
+ Var1 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Disabled">
+ <summary>
+ Disabled.
+ Var1 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.AwaitBoarding">
+ <summary>
+ Await Boarding
+ Var1 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Attack">
+ <summary>
+ Attack.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.AttackEscorts">
+ <summary>
+ Attack Escorts.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Protect">
+ <summary>
+ Protect.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Escort">
+ <summary>
+ Escort.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Disable">
+ <summary>
+ Disable.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.BoardAndGiveCargo">
+ <summary>
+ Board and Give Cargo.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.BoardAndTakeCargo">
+ <summary>
+ Board and Take Cargo.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.BoardAndExchangeCargo">
+ <summary>
+ Board and Exchange Cargo.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.BoardAndCaptureCargo">
+ <summary>
+ Board and Capture Cargo.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.BoardAndDestroyCargo">
+ <summary>
+ Board and Destroy Cargo.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.PickUp">
+ <summary>
+ Pick Up.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.DropOff">
+ <summary>
+ Drop Off.
+ Var2 = Flight Group.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.Wait">
+ <summary>
+ Wait
+ Var1 = Wait Time (seconds * 5).
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Wait">
+ <summary>
+ SS Wait.
+ Var1 = Wait Time (seconds * 5).
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_PatrolLoop">
+ <summary>
+ SS Patrol Loop.
+ Var1 = Number of Loops.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_AwaitReturn">
+ <summary>
+ SS Await Return.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Launch">
+ <summary>
+ SS Launch.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Protect">
+ <summary>
+ SS Protect.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_WaitAndProtect">
+ <summary>
+ SS Wait and Protect.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_PatrolAndAttack">
+ <summary>
+ SS Patrol and Attack.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_PatrolAndDisable">
+ <summary>
+ SS Patrol and Disable.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_HoldSteady">
+ <summary>
+ SS Hold Steady.
+ Var1 = Wait Time (seconds * 5).
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_GoHome">
+ <summary>
+ SS Go Home.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Wait2">
+ <summary>
+ SS Wait.
+ Var1 = Wait Time (seconds * 5).
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Board">
+ <summary>
+ SS Board.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.BoardToRepair">
+ <summary>
+ Board to Repair.
+ Var1 = Docking Time (seconds * 5).
+ Var2 = Number of Dockings.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.HoldStation2">
+ <summary>
+ Hold Station.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.HoldSteady">
+ <summary>
+ Hold Steady.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_HoldStation">
+ <summary>
+ SS Hold Station.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Kamikaze1">
+ <summary>
+ SS Kamikaze.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Kamikaze2">
+ <summary>
+ SS Kamikaze.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Disabled1">
+ <summary>
+ SS Disabled.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.MissionOrderType.SS_Disabled2">
+ <summary>
+ SS Disabled.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionCraftWhen">
+ <summary>
+ Enumeration for Mission Craft When
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.SpaceObjectCategory">
+ <summary>
+ Enumeration for SpaceObject Category
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.SpaceObjectType">
+ <summary>
+ Enumeration for SpaceObject Type
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.GoalState">
+ <summary>
+ Enumeration for Goal States
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.GoalState.None">
+ <summary>
+ Non-existent goal.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.GoalState.Complete">
+ <summary>
+ Completed Mission Goal.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.GoalState.Failed">
+ <summary>
+ Failed Mission Goal.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.GoalState.Incomplete">
+ <summary>
+ Incomplete Mission Goal.
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.GoalType">
+ <summary>
+ Enumeration for Goal Types
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.DifficultySetting">
+ <summary>
+ Enumeration for Difficulty Settings
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.ModelPartType">
+ <summary>
+ Enumeration for Model Part Types
+ </summary>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroup">
+ <summary>
+ Class representation of a TIE Fighter Mission Flight Group struct
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionFlightGroup.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionFlightGroup.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionFlightGroup.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to build the structure from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionFlightGroup.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionFlightGroup.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionFlightGroup.Name">
+ <summary>
+ Gets the name of the Flight Group.
+ </summary>
+ <returns>Value of the field.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionFlightGroup.Pilot">
+ <summary>
+ Gets the Flight Group Pilot string.
+ </summary>
+ <returns>Value of the field.</returns>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionFlightGroupGoal">
+ <summary>
+ Class representation of a TIE Fighter Mission Flight Group Goal struct
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionFlightGroupGoal.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionFlightGroupGoal.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ The array must be exactly 2 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to build the structure from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionFlightGroupGoal.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ The array must be exactly 2 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionFlightGroupGoal.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionHeader">
+ <summary>
+ Class representation of a TIE Fighter Mission File Header struct.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionHeader.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionHeader.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ The array must be exactly 458 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to build the structure from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionHeader.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the fields in the class using the provided array of bytes.
+ The array must be exactly 458 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionHeader.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionHeader.PlatformID">
+ <summary>
+ Gets the Platform ID of the Mission.
+ </summary>
+ <returns>Value of the field.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionHeader.NumFlightGroups">
+ <summary>
+ Gets the number of Flight Groups in the Mission.
+ </summary>
+ <returns>Value of the field.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionHeader.NumMessages">
+ <summary>
+ Gets the number of Messages in the Mission.
+ </summary>
+ <returns>Value of the field.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionHeader.CaptureOnEject">
+ <summary>
+ Gets whether the player might be captured after ejecting from their craft.
+ </summary>
+ <returns>Value of the field.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionHeader.EndOfMissionMessage(System.Int32)">
+ <summary>
+ Gets an End of Mission Message string.
+ </summary>
+ <param name="index">Index of End of Mission Message string. 0 - 5.</param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionOrder">
+ <summary>
+ Class representation of a TIE Fighter Mission Order struct.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionOrder.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionOrder.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ The array must be exactly 18 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to build the structure from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionOrder.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all the fields in the class using the provided array of bytes.
+ The array must be exactly 18 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure from.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionOrder.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionOrder.TargetType(System.Int32)">
+ <summary>
+ Gets the Target Variable Type for one of the Order's potential targets.
+ </summary>
+ <param name="index">Target index, 0 - 3.</param>
+ <returns>Value of the field.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionOrder.Target(System.Int32)">
+ <summary>
+ Gets the Target for one of the Order's potential targets, the type of which is determined by the matching TargetType field.
+ </summary>
+ <param name="index">Target index, 0 - 3.</param>
+ <returns>Value of the field.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionOrder.Target1Or2">
+ <summary>
+ Gets the boolean operator applied to Target 1 and Target 2 checks.
+ </summary>
+ <returns>Non-zero for OR, zero for AND.</returns>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionOrder.Target3or4">
+ <summary>
+ Gets the boolean operator applied to Target 3 and Target 4 checks.
+ </summary>
+ <returns>Non-zero for OR, zero for AND.</returns>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionTrigger">
+ <summary>
+ Class representation of a TIE Fighter Mission Trigger struct
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionTrigger.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionTrigger.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ The array must be exactly 4 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to build the structure from.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionTrigger.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all the fields in the class using the provided array of bytes.
+ The array must be exactly 4 bytes long, otherwise an exception will be thrown.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure from.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.MissionTrigger.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.MissionWaypoint">
+ <summary>
+ Class representation of a TIE Fighter Mission Waypoint struct, but modified to make more sense.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.MissionWaypoint.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.SpaceObject">
+ <summary>
+ Class representation of a TIE Fighter Space_Object struct
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObject.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObject.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObject.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ </summary>
+ <param name="bytes"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.SpaceObject.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObject.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.SpaceObjectTypeInfo">
+ <summary>
+ Structure to hold extra data/info for Space_Object types
+ </summary>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.Name">
+ <summary>
+ Space Object's name, singular.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.NamePlural">
+ <summary>
+ Space Object's name, plural.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.CMD">
+ <summary>
+ Space Object's CMD code.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.IconIndex">
+ <summary>
+ Icon Index for drawing the Space Object.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.SpeciesName">
+ <summary>
+ SPECIES.LFD resource name of the Space Object's model.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.SpeciesFileIndex">
+ <summary>
+ Index of SPECIES.LFD file the Space Object's model is contained in, or -1 if there is no model.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.Count">
+ <summary>
+ Returns the number of SpaceObjectTypes there's info for.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.SpaceObjectTypeInfo.Types(System.Int32)">
+ <summary>
+ 
+ </summary>
+ <param name="index"></param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.TIEServices">
+ <summary>
+ Class responsible for all TIE Fighter-related services, serving as the intermediary between the main program and the DosBoxServices class.
+ </summary>
+</member>
+<member name="F:TIE_Watcher.TIE.TIEServices.NO_OPEN_PROCESS">
+ <summary>
+ String constant used for throwing exceptions when a process is not open, cannot be reached, or DOSBox is not running TIE.EXE
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.initIcons">
+ <summary>
+ Initializes the craft icons
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.triggerVarDescription(TIE_Watcher.TIE.MissionTrigger,System.Boolean,System.Boolean@)">
+ <summary>
+ Generates a human-readable string describing the variable of a MissionTrigger.
+ </summary>
+ <param name="trigger"></param>
+ <param name="includeAmount">Whether or not the trugger amount should be included.</param>
+ <param name="isPlural">Boolean variable to receive whether or not the string should be treated as plural.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.OpenProcess(System.Diagnostics.Process)">
+ <summary>
+ Opens the specified Process, ideally a running instance of DOSBox, for reading TIE Fighter data from.
+ </summary>
+ <param name="proc">Process representing a running instance of DOSBox.</param>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.CloseProcess">
+ <summary>
+ Closes the underlying process.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.GetXMEMPointer(System.UInt16)">
+ <summary>
+ Returns a pointer into DOS memory based off a TIE Fighter XMEM Handle.
+ </summary>
+ <param name="handle"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.CheckTriggerGoalState(TIE_Watcher.TIE.MissionTrigger)">
+ <summary>
+ Checks a MissionTrigger based on the game's current state and returns whether the trigger's condition is Incomplete, Complete, or Failed.
+ GoalState.None will be returned if the MissionTrigger is not a valid goal trigger.
+ This requires an open DOSBox process, so an exception will be thrown if a connection is not available.
+ </summary>
+ <param name="trigger"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.MissionTriggerDescription(TIE_Watcher.TIE.MissionTrigger)">
+ <summary>
+ Generates a human-readable string describing the criteria for a MissionTrigger.
+ This requires an open DOSBox process, so an exception will be thrown if a connection is not available.
+ </summary>
+ <param name="trigger"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.MissionOrderDescription(TIE_Watcher.TIE.MissionOrder)">
+ <summary>
+ Generates a human-readable string describing a MissionOrder.
+ This requires an open DOSBox process, so an exception will be thrown if a connection is not available.
+ </summary>
+ <param name="order"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.AbortTriggerDescription(TIE_Watcher.TIE.MissionAbortTrigger)">
+ <summary>
+ Generates a human-readable string describing a MissionAbortTrigger.
+ </summary>
+ <param name="abort"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.FlightGroupGoalDescription(TIE_Watcher.TIE.MissionFlightGroupGoal)">
+ <summary>
+ Generates a human-readable string describing a MissionFlightGroupGoal.
+ </summary>
+ <param name="goal"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.TriggerGoalDescriptionByState(TIE_Watcher.TIE.MissionTrigger,TIE_Watcher.TIE.GoalState)">
+ <summary>
+ Generates a human-readable string describing a MissionTrigger as if it were a global goal, in a specific state of completion.
+ </summary>
+ <param name="trigger"></param>
+ <param name="state"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.FlightGroupGoalDescriptionByState(TIE_Watcher.TIE.MissionFlightGroup,TIE_Watcher.TIE.GoalType,TIE_Watcher.TIE.GoalState,System.Boolean)">
+ <summary>
+ Generates a human-readable string describing one of a Flight Group's goal conditions in a specific state.
+ </summary>
+ <param name="flightGroup"></param>
+ <param name="goalType">Type of goal.</param>
+ <param name="state">Completion state.</param>
+ <param name="penalty">Optional. Whether or not to display the goal as a penalty to be avoided. Defaults to false.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.IFFName(System.Int32)">
+ <summary>
+ Generates a human-readable IFF string from an IFF code.
+ This is done using the currently loaded mission data.
+ </summary>
+ <param name="IFF"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.FlightGroupDescription(TIE_Watcher.TIE.MissionFlightGroup)">
+ <summary>
+ Generates a human-readable string describing a MissionFlightGroup, using the CMD Code of the Flight Group's craft and the Flight Group's name.
+ </summary>
+ <param name="flightGroup"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.SpaceObjectDescription(System.Int32)">
+ <summary>
+ Generates a human-readable string describing a SpaceObject by index.
+ This requires an open DOSBox process, so an exception will be thrown if a connection is not available.
+ </summary>
+ <param name="index"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.WeaponTypeDescription(System.Byte)">
+ <summary>
+ Returns the name of a Weapon Type.
+ </summary>
+ <param name="weaponType"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.TIEServices.TargetDescription(System.UInt16)">
+ <summary>
+ Generates a human-readable string describing a target by it's code.
+ This requires an open DOSBox process, so an exception will be thrown if a connection is not available.
+ </summary>
+ <param name="target">Target code to use for the description.</param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.MissonHeader">
+ <summary>
+ Gets the MissionHeader of a loaded mission in TIE Fighter.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.MissionFlightGroups(System.Int32)">
+ <summary>
+ Gets a MissionFlightGroup from a loaded mission in TIE Fighter.
+ </summary>
+ <param name="index">Index of the MissionFlightGroup to get.</param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.FlightGroupStatus(System.Int32)">
+ <summary>
+ Gets a FlightGroupStatus struct fronm a loaded mission in TIE Fighter.
+ </summary>
+ <param name="index"></param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.SpaceObjects(System.Int32)">
+ <summary>
+ Gets a SpaceObject from a loaded mission in TIE Fighter.
+ </summary>
+ <param name="index">Index of the SpaceObject to get.</param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.SpaceObjectDefinitions(TIE_Watcher.TIE.SpaceObjectType)">
+ <summary>
+ Gets a SpaceObjectDefinition from TIE Fighter.
+ </summary>
+ <param name="index">Index of the SpaceObjectDefinition to get.</param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.WeaponObjects(System.Int32)">
+ <summary>
+ Gets a WeaponObject from a loaded mission in TIE Fighter.
+ </summary>
+ <param name="index">Index of the WeaponObject to get.</param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.CraftObject(TIE_Watcher.TIE.SpaceObject)">
+ <summary>
+ Gets a CraftObject from memory pointed to by a SpaceObject.
+ If the SpaceObject does not point to a CraftObject an exception will be thrown.
+ </summary>
+ <param name="spaceObject">The SpaceObject to derive the CraftObject from.</param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.DifficultySetting">
+ <summary>
+ Gets the current player's Difficulty Setting
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.MissionOverallStatus(TIE_Watcher.TIE.GoalType)">
+ <summary>
+ Gets the overall status of the current mission's goals by type.
+ </summary>
+ <param name="goalType"></param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.MissionGlobalGoals(System.Int32)">
+ <summary>
+ Gets MissionGlobalGoals
+ </summary>
+ <param name="index"></param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.Process">
+ <summary>
+ Gets the Process that's currently being used as a data source.
+ </summary>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.CraftIcon(System.Int32,System.Int32)">
+ <summary>
+ Gets a bitmap icon representing a Craft Type, colored to match an IFF.
+ </summary>
+ <param name="index">CraftType index.</param>
+ <param name="IFF">IFF code.</param>
+ <returns></returns>
+</member>
+<member name="P:TIE_Watcher.TIE.TIEServices.CraftIconBox(System.Int32)">
+ <summary>
+ Gets a bitmap to draw a craft icon within, colored to match an IFF.
+ </summary>
+ <param name="IFF">IFF code.</param>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.TIE.WeaponObject">
+ <summary>
+ Class representation of a TIE Fighter WeaponObject struct (i.e. mines and probes)
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.WeaponObject.#ctor">
+ <summary>
+ Creates a new instance of this class.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.TIE.WeaponObject.Clone">
+ <summary>
+ Creates a new object that is a deep copy of the current instance.
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.WeaponObject.FromBytes(System.Byte[])">
+ <summary>
+ Creates a new instance of the class using the provided array of bytes.
+ </summary>
+ <param name="bytes"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.TIE.WeaponObject.UpdateBytes(System.Byte[])">
+ <summary>
+ Updates all of the class' fields using the provided array of bytes.
+ </summary>
+ <param name="bytes">The array of bytes to update the structure with.</param>
+</member>
+<member name="P:TIE_Watcher.TIE.WeaponObject.SizeOf">
+ <summary>
+ Gets size, in bytes, of the struct the class represents.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.ProcessServices">
+ <summary>
+ A class that allows the manipulation of a process, such as memory reads and writes.
+ </summary>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.#ctor(System.Diagnostics.Process,TIE_Watcher.ProcessAccess)">
+ <summary>
+ Creates a new instance of the ProcessMemoryReader class and attempts to obtain a handle for accessing the process.
+ If a handle cannot be obtained, an exception will be thrown.
+ </summary>
+ <param name="sourceProc">The Process that memory will be read from</param>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.ReadMemoryBytes(System.IntPtr,System.Int32)">
+ <summary>
+ Reads the specified number of bytes from the address in the process.
+ Returns Nothing if the read fails for any reason.
+ </summary>
+ <param name="address">Address in the process' memory to read from.</param>
+ <param name="length">Number of bytes to read.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.ReadMemoryByte(System.IntPtr)">
+ <summary>
+ Reads a Byte from an address in the process.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.ReadMemoryUInt16(System.IntPtr)">
+ <summary>
+ Reads a UInt16 from an address in the process.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.ReadMemoryInt16(System.IntPtr)">
+ <summary>
+ Reads a Int16 from an address in the process.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.ReadMemoryUInt32(System.IntPtr)">
+ <summary>
+ Reads a UInt32 from an address in the process.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.ReadMemoryInt32(System.IntPtr)">
+ <summary>
+ Reads a Int32 from an address in the process.
+ </summary>
+ <param name="address"></param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.WriteMemoryBytes(System.IntPtr,System.Byte[]@)">
+ <summary>
+ Writes the specified number of bytes from the array to the process.
+ Returns the number of bytes written to the process.
+ </summary>
+ <param name="address">Address in the process' memory to write to.</param>
+ <param name="bytes">Array of bytes to write to the process.</param>
+ <returns></returns>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.WriteMemoryByte(System.IntPtr,System.Byte)">
+ <summary>
+ Writes a Byte to an address in the process.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.WriteMemoryUInt16(System.IntPtr,System.UInt16)">
+ <summary>
+ Writes a UInt16 to an address in the process.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.WriteMemoryInt16(System.IntPtr,System.Int16)">
+ <summary>
+ Writes a Int16 to an address in the process.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.WriteMemoryUInt32(System.IntPtr,System.UInt32)">
+ <summary>
+ Writes a UInt32 to an address in the process.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.WriteMemoryInt32(System.IntPtr,System.Int32)">
+ <summary>
+ Writes a Int32 to an address in the process.
+ </summary>
+ <param name="address"></param>
+ <param name="value"></param>
+</member>
+<member name="M:TIE_Watcher.ProcessServices.Close">
+ <summary>
+ Closes access to the instance's process and frees the handle.
+ This does not close or terminate the underlying process.
+ </summary>
+</member>
+<member name="E:TIE_Watcher.ProcessServices.ProcessExited">
+ <summary>
+ An event that is raised when the underlying process the instance services has exited.
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+</member>
+<member name="P:TIE_Watcher.ProcessServices.HasExited">
+ <summary>
+ Gets whether the underlying process has exited.
+ </summary>
+ <returns></returns>
+</member>
+<member name="T:TIE_Watcher.ProcessAccess">
+ <summary>
+ Defines constants for read, write, or read/write access to a process.
+ </summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,35 @@
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\bin\Debug\TIE Watcher.exe.config
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\bin\Debug\TIE Watcher.exe
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\bin\Debug\TIE Watcher.pdb
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\bin\Debug\TIE Watcher.xml
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\obj\Debug\TIE Watcher.vbprojResolveAssemblyReference.cache
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\obj\Debug\TIE_Watcher.Resources.resources
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\obj\Debug\TIE Watcher.vbproj.GenerateResource.Cache
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\obj\Debug\TIE Watcher.exe
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\obj\Debug\TIE Watcher.xml
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\obj\Debug\TIE Watcher.pdb
+C:\Users\Jim\AppData\Local\Temporary Projects\TIE Watcher\obj\Debug\TIE_Watcher.frmTest.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\bin\Debug\TIE Watcher.exe.config
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE Watcher.exe
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE Watcher.xml
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE Watcher.pdb
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\bin\Debug\TIE Watcher.exe
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\bin\Debug\TIE Watcher.pdb
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\bin\Debug\TIE Watcher.xml
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.Resources.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE Watcher.vbproj.GenerateResource.Cache
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormFlightGroup.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormTest.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormSpaceObject.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormCraftInfo.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormCombatMap.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormGoalWatcher.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormTrainer.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormModelBrowser.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.ModelHeaderPanel.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.ModelPartHeaderPanel.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.ModelMeshPanel.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormModelRender.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.FormModelVectorize.resources
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE Watcher.vbprojResolveAssemblyReference.cache
+C:\Users\Jim\Documents\Visual Studio 2015\Projects\TIE Watcher\TIE Watcher\obj\Debug\TIE_Watcher.SpaceObjectSelector.resources

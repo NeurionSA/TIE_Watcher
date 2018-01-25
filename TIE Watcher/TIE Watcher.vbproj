@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1CDEF54-87D9-494A-BAAF-07877AB04993}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>TIE_Watcher.My.MyApplication</StartupObject>
+    <RootNamespace>TIE_Watcher</RootNamespace>
+    <AssemblyName>TIE Watcher</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>TIE Watcher.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>TIE Watcher.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Control Helper Classes\ComboBoxItem.vb" />
+    <Compile Include="Control Helper Classes\ModelBrowserComboItem.vb" />
+    <Compile Include="Control Helper Classes\ModelBrowserTreeNodeTag.vb" />
+    <Compile Include="Control Helper Classes\SpaceObjectTreeNodeTag.vb" />
+    <Compile Include="Controls\ModelHeaderPanel.Designer.vb">
+      <DependentUpon>ModelHeaderPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModelHeaderPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModelMeshPanel.Designer.vb">
+      <DependentUpon>ModelMeshPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModelMeshPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ModelPartHeaderPanel.Designer.vb">
+      <DependentUpon>ModelPartHeaderPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModelPartHeaderPanel.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SpaceObjectSelector.Designer.vb">
+      <DependentUpon>SpaceObjectSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SpaceObjectSelector.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DOSBox\DosBoxServices.vb" />
+    <Compile Include="ResourceHelper.vb" />
+    <Compile Include="Forms\FormCombatMap.Designer.vb">
+      <DependentUpon>FormCombatMap.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCombatMap.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCraftInfo.Designer.vb">
+      <DependentUpon>FormCraftInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormCraftInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFlightGroup.Designer.vb">
+      <DependentUpon>FormFlightGroup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFlightGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormGoalWatcher.Designer.vb">
+      <DependentUpon>FormGoalWatcher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormGoalWatcher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormModelBrowser.Designer.vb">
+      <DependentUpon>FormModelBrowser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormModelBrowser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormModelRender.Designer.vb">
+      <DependentUpon>FormModelRender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormModelRender.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormModelVectorize.Designer.vb">
+      <DependentUpon>FormModelVectorize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormModelVectorize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSpaceObject.Designer.vb">
+      <DependentUpon>FormSpaceObject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSpaceObject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTest.Designer.vb">
+      <DependentUpon>FormTest.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormTrainer.Designer.vb">
+      <DependentUpon>FormTrainer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormTrainer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NativeMethods.vb" />
+    <Compile Include="StringsEx.vb" />
+    <Compile Include="TIE\CraftObject.vb" />
+    <Compile Include="TIE\CraftObjectWeapon.vb" />
+    <Compile Include="TIE\FlightGroupStatus.vb" />
+    <Compile Include="TIE\LFD Resources\AnimationResource.vb" />
+    <Compile Include="TIE\LFD Resources\LFD.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProcessServices.vb" />
+    <Compile Include="TIE\LFD Resources\ModelResource.vb" />
+    <Compile Include="TIE\LFD Resources\PaletteResource.vb" />
+    <Compile Include="TIE\MissionGlobalGoal.vb" />
+    <Compile Include="TIE\Ship Models\ModelFace.vb" />
+    <Compile Include="TIE\Ship Models\ModelFaceMarking.vb" />
+    <Compile Include="TIE\Ship Models\ModelHeader.vb" />
+    <Compile Include="TIE\Ship Models\ModelMesh.vb" />
+    <Compile Include="TIE\Ship Models\ModelPart.vb" />
+    <Compile Include="TIE\Ship Models\ModelVertex.vb" />
+    <Compile Include="TIE\Rendering\Point3D.vb" />
+    <Compile Include="TIE\Rendering\Matrix3D.vb" />
+    <Compile Include="TIE\SpaceObjectDefinition.vb" />
+    <Compile Include="TIE\TIEEnums.vb" />
+    <Compile Include="TIE\MissionFlightGroup.vb" />
+    <Compile Include="TIE\MissionFlightGroupGoal.vb" />
+    <Compile Include="TIE\MissionHeader.vb" />
+    <Compile Include="TIE\MissionOrder.vb" />
+    <Compile Include="TIE\MissionTrigger.vb" />
+    <Compile Include="TIE\MissionWaypoint.vb" />
+    <Compile Include="TIE\SpaceObject.vb" />
+    <Compile Include="TIE\SpaceObjectTypeInfo.vb" />
+    <Compile Include="TIE\TIEServices.vb" />
+    <Compile Include="TIE\WeaponObject.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ModelHeaderPanel.resx">
+      <DependentUpon>ModelHeaderPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModelMeshPanel.resx">
+      <DependentUpon>ModelMeshPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ModelPartHeaderPanel.resx">
+      <DependentUpon>ModelPartHeaderPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SpaceObjectSelector.resx">
+      <DependentUpon>SpaceObjectSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCombatMap.resx">
+      <DependentUpon>FormCombatMap.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormCraftInfo.resx">
+      <DependentUpon>FormCraftInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFlightGroup.resx">
+      <DependentUpon>FormFlightGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormGoalWatcher.resx">
+      <DependentUpon>FormGoalWatcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormModelBrowser.resx">
+      <DependentUpon>FormModelBrowser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormModelRender.resx">
+      <DependentUpon>FormModelRender.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormModelVectorize.resx">
+      <DependentUpon>FormModelVectorize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSpaceObject.resx">
+      <DependentUpon>FormSpaceObject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTest.resx">
+      <DependentUpon>FormTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormTrainer.resx">
+      <DependentUpon>FormTrainer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <EmbeddedResource Include="resources\ship_vectors\ASSAULT.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\ASTG33.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\ASTH44.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\ASTW21.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\AWING.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\BARGE.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\BWING.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CAL.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONC.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\COND.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONE.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONF.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONG.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONH.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CONTAIN.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CORTN.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CORV.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CORVTA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CRUSA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\CRUSB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\ESCRT.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\ESCTRP.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FACTRY.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FGHTA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FGHTB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FREIGHT.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FRIGA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FRTA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FRTB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\FRTC.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\INTERD.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\ISD.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\LTCAL.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\LTFRTA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\MINE1.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\MINE2.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\MINE3.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\MISLBT.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\NEB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PASNGR.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PATRL.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PATRLB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PLATA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PLATAB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PLATB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PLATBA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PLATC.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PLATCA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PROBE1.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\PROBEA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\SAT1.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\SHUTB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\SHUTTLE.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TIEADV.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TIEBMB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TIEDEL.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TIEFTR.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TIEINT.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TRANSB.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TRNSPRT.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\TUG.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\UTILA.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\VSD.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\XWING.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\YWING.VEC" />
+    <EmbeddedResource Include="resources\ship_vectors\Z-95.VEC" />
+    <EmbeddedResource Include="resources\LFD\PLAYER.LFD" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
